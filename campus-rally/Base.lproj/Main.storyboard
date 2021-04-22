@@ -184,6 +184,21 @@
             <point key="canvasLocation" x="1136.9230769230769" y="27.014218009478672"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="4UM-Xg-hSt">
+            <objects>
+                <viewController storyboardIdentifier="RG" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zTU-ol-8a8" customClass="RGViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1EH-NF-GtI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T4B-3H-3Z7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8G-f3-oDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="335"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="9xL-Do-vKe">
             <objects>
                 <viewController id="DmF-wP-5z2" sceneMemberID="viewController">

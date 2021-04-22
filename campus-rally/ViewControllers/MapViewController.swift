@@ -129,6 +129,8 @@ class MapViewController: UIViewController {
         addAnnotation(latitude: 34.80080759819321,  longitude: 135.76798711156198, title: "香知館", subtitle: "KC")
         addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館", subtitle: "JM")
         addAnnotation(latitude: 34.800265709431734, longitude: 135.76943038280467, title: "日糧館", subtitle: "NR")
+        addAnnotation(latitude: 34.8010082683426, longitude: 135.7685829428371, title: "理化学館", subtitle: "RG")
+
         // SignOutのアラートを表示する
         //アラートコントローラーを作成する。
         signOutAlert = UIAlertController(title: "サインアウト", message: "本当にサインアウトしますか？", preferredStyle: UIAlertController.Style.alert)
@@ -249,6 +251,11 @@ extension MapViewController: MKMapViewDelegate{
                 button.addTarget(self, action: #selector(sendLocation_nr), for: .touchUpInside)
                 //右側にボタンを追加
                 pinView.rightCalloutAccessoryView = button
+            case "理化学館":
+                print("RG")
+                button.addTarget(self, action: #selector(sendLocation_rg), for: .touchUpInside)
+                //右側にボタンを追加
+                pinView.rightCalloutAccessoryView = button
             default:
                 print("現在地")
                 pinView.image = UIImage(named: "current_icon")!
@@ -297,5 +304,14 @@ extension MapViewController: MKMapViewDelegate{
        // ③画面遷移
        self.present(nextView, animated: true, completion: nil)
         print("NRが呼ばれました")
+    }
+    
+    @objc func sendLocation_rg(){
+        let storyboard: UIStoryboard = self.storyboard!
+       // ②遷移先ViewControllerのインスタンス取得
+       let nextView = storyboard.instantiateViewController(withIdentifier: "RG")
+       // ③画面遷移
+       self.present(nextView, animated: true, completion: nil)
+        print("RGが呼ばれました")
     }
 }
