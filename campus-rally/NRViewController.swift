@@ -15,7 +15,9 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     let swiftyTesseract = SwiftyTesseract(language: RecognitionLanguage.japanese)
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var image = UIImage()
-
+    var image_jpeg: Data!
+    var image_UIImage: UIImage!
+    
 //    var ActivityIndicator: UIActivityIndicatorView!
 
     @IBOutlet weak var mainQuest: UIButton!
@@ -97,9 +99,16 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
         
         // 選択したor撮影した写真を取得する
         image = info[.originalImage] as! UIImage
+        
+        // JPEGに変換する
+        image_jpeg = image.jpegData(compressionQuality: 1)
+        
+        // UIImageに変換する（これじゃjpegに変換した意味がなくなる？でも引数UIImageだから・・）
+        image_UIImage = UIImage(data: image_jpeg)
+        
 //        // クルクルスタート
 //        ActivityIndicator.startAnimating()
-        print(functions.charactor_recognition(input_image: image))
+        print(functions.charactor_recognition(input_image: image_UIImage))
 
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)

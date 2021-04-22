@@ -46,6 +46,7 @@ class functions: NSObject {
         
         return text
     }
+    
 }
 
 func convertColor(source srcImage: UIImage) -> UIImage {
