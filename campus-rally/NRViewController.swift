@@ -17,6 +17,7 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     var image = UIImage()
     var image_jpeg: Data!
     var image_UIImage: UIImage!
+    var result: Bool!
     
 //    var ActivityIndicator: UIActivityIndicatorView!
 
@@ -103,15 +104,21 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
         // JPEGに変換する
         image_jpeg = image.jpegData(compressionQuality: 1)
         
-        // UIImageに変換する（これじゃjpegに変換した意味がなくなる？でも引数UIImageだから・・）
+        // UIImageに変換する（これじゃjpegに変換した意味がなくなる？でも引数UIImageだからなぁ）
         image_UIImage = UIImage(data: image_jpeg)
+        
+        // 写真を選ぶビューを引っ込める
+        self.dismiss(animated: true)
         
 //        // クルクルスタート
 //        ActivityIndicator.startAnimating()
+        
+        // 文字認識
         print(functions.charactor_recognition(input_image: image_UIImage))
-
-        // 写真を選ぶビューを引っ込める
-        self.dismiss(animated: true)
+        
+        // 正誤判定
+        result = functions.judgement(input_text: functions.charactor_recognition(input_image: image_UIImage), correct_labels: "KOCHIKAN", "香知館", "kochikan")
+        print(result)
 //        // クルクルストップ
 //        ActivityIndicator.stopAnimating()
     }

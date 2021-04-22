@@ -11,6 +11,7 @@ import opencv2
 import SwiftyTesseract
 
 class functions: NSObject {
+    // 画像処理（前処理）と文字認識を行う
     class func charactor_recognition(input_image: UIImage) -> String{
 
         print("start")
@@ -47,6 +48,65 @@ class functions: NSObject {
         return text
     }
     
+    // 正誤判定を行う
+    class func judgement(input_text: String, correct_labels: String...) -> Bool{
+        var index: Int = 0
+        
+        for cl in correct_labels{
+            index = 0
+            var cl_array = Array(cl)
+            for chr in cl_array{
+                index += 1
+                if (!input_text.contains(chr)){
+                    break
+                }else{
+                    if (index == cl_array.count){
+                        print(index)
+                        print(chr)
+                        print(cl)
+                        return true
+                    }
+                }
+            }
+        }
+        
+        
+        return false
+//        print(correct_labels)
+//        print(correct_labels[0].count)
+//        print(correct_labels[1].count)
+//        print(correct_labels[2].count)
+//
+//        for c_label in correct_labels{
+//            print(c_label)
+//            for chr in c_label{
+//                print(c_label[3])
+//            }
+//        }
+//        return true
+//        for c_label in correct_labels{
+//            for chr in c_label{
+//    //            print(chr)
+//                // correct_labelを1文字ずつinput_textと比較し、含まれていない場合falseを返す
+//                if (!input_text.contains(chr)){
+//                    print("break")
+//                    print(chr)
+//                    print(c_label)
+//                    break
+//                }
+//                if (chr == c_label[c_label.count]){
+//                    print("最後まで回った")
+//                    print(chr)
+//                    print(c_label[length(c_label)])
+//                    print()
+//                }
+//                print(chr)
+//            }
+////            print(c_label)
+//            return true
+//        }
+//        return false
+    }
 }
 
 func convertColor(source srcImage: UIImage) -> UIImage {
