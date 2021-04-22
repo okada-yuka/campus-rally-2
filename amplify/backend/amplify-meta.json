@@ -1,0 +1,37 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-campusrally-dev-15512-authRole",
+      "UnauthRoleArn": "arn:aws:iam::509430456398:role/amplify-campusrally-dev-15512-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::509430456398:role/amplify-campusrally-dev-15512-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-campusrally-dev-15512-deployment",
+      "UnauthRoleName": "amplify-campusrally-dev-15512-unauthRole",
+      "StackName": "amplify-campusrally-dev-15512",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:509430456398:stack/amplify-campusrally-dev-15512/2e8a8250-a1f9-11eb-aec0-0ea611ef84b3",
+      "AmplifyAppId": "di4x66bo1i19f"
+    }
+  },
+  "auth": {
+    "campusrallyab45f1b4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-campusrally-dev-15512-deployment/amplify-cfn-templates/auth/campusrallyab45f1b4-cloudformation-template.yml",
+        "logicalId": "authcampusrallyab45f1b4"
+      },
+      "lastPushTimeStamp": "2021-04-20T17:00:46.979Z",
+      "output": {
+        "UserPoolId": "ap-northeast-1_pkbmXqOGJ",
+        "AppClientIDWeb": "4os8hds4nctnnrhm5nqmcflm5r",
+        "AppClientID": "6d83bep1qidaaq04lpsp40dgon",
+        "IdentityPoolId": "ap-northeast-1:d0ffe60f-383a-408c-a9f3-6fc735247353",
+        "IdentityPoolName": "campusrallyab45f1b4_identitypool_ab45f1b4__dev",
+        "UserPoolName": "campusrallyab45f1b4_userpool_ab45f1b4"
+      },
+      "lastPushDirHash": "lSvySJYP9Qg3hsZPyCHKLuNB7yM="
+    }
+  }
+}

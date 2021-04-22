@@ -1,0 +1,91 @@
+PODS:
+  - Amplify (1.8.1):
+    - Amplify/Default (= 1.8.1)
+  - Amplify/Default (1.8.1)
+  - AppSyncRealTimeClient (1.4.4):
+    - Starscream (~> 3.1.1)
+  - AWSAppSync (3.2.0):
+    - AppSyncRealTimeClient (~> 1.4)
+    - AWSCore (~> 2.23.3)
+    - ReachabilitySwift (= 5.0.0)
+    - SQLite.swift (~> 0.12.2)
+  - AWSAuthCore (2.23.3):
+    - AWSCore (= 2.23.3)
+  - AWSAuthUI (2.23.3):
+    - AWSAuthCore (= 2.23.3)
+    - AWSCore (= 2.23.3)
+  - AWSCognitoIdentityProvider (2.23.3):
+    - AWSCognitoIdentityProviderASF (= 2.23.3)
+    - AWSCore (= 2.23.3)
+  - AWSCognitoIdentityProviderASF (2.23.3)
+  - AWSCore (2.23.3)
+  - AWSDynamoDB (2.23.3):
+    - AWSCore (= 2.23.3)
+  - AWSMobileClient (2.23.3):
+    - AWSAuthCore (= 2.23.3)
+    - AWSCognitoIdentityProvider (= 2.23.3)
+    - AWSCognitoIdentityProviderASF (= 2.23.3)
+    - AWSCore (= 2.23.3)
+  - AWSS3 (2.23.3):
+    - AWSCore (= 2.23.3)
+  - AWSUserPoolsSignIn (2.23.3):
+    - AWSAuthCore (= 2.23.3)
+    - AWSCognitoIdentityProvider (= 2.23.3)
+    - AWSCore (= 2.23.3)
+  - ReachabilitySwift (5.0.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - Starscream (3.1.1)
+  - SwiftyTesseract (2.2.3)
+
+DEPENDENCIES:
+  - Amplify
+  - AWSAppSync
+  - AWSAuthUI
+  - AWSDynamoDB
+  - AWSMobileClient
+  - AWSS3
+  - AWSUserPoolsSignIn
+  - SwiftyTesseract (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - Amplify
+    - AppSyncRealTimeClient
+    - AWSAppSync
+    - AWSAuthCore
+    - AWSAuthUI
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSDynamoDB
+    - AWSMobileClient
+    - AWSS3
+    - AWSUserPoolsSignIn
+    - ReachabilitySwift
+    - SQLite.swift
+    - Starscream
+    - SwiftyTesseract
+
+SPEC CHECKSUMS:
+  Amplify: 7e9e36acaacc28733454167b67b2ecf66133ce02
+  AppSyncRealTimeClient: 4479354d262a23d2cc9fea1760f3815b75a4091a
+  AWSAppSync: 208abb79fed2844962f15de1753d06df5a496d18
+  AWSAuthCore: 2aaf8dec7f50e3f7606857bdca0db9263faed0c5
+  AWSAuthUI: b541704bb7394bc3c82ba70a119f0b9c4d632d67
+  AWSCognitoIdentityProvider: fcd9b00fec0ef5ac6768548af948ad033b52da98
+  AWSCognitoIdentityProviderASF: 719578cca39b3233bd67e656bdf04d409e8fc255
+  AWSCore: c60e635b1a61cb27b6dfff646ce9f402be870b62
+  AWSDynamoDB: ad2837b8ebeb7db35010101eac6a98c22483fd30
+  AWSMobileClient: bdfc148fc11b846331f2bec4a7063c95e66c329e
+  AWSS3: d8e8a6d7328e7fa1468788c4d7efa71d7f3a6caa
+  AWSUserPoolsSignIn: 6fcbd38d1c53f6ce6c51d464d595c736800f4127
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftyTesseract: d92b644e0e12d143bc272bfe1edb73ae07f2b2e8
+
+PODFILE CHECKSUM: 1878d1be55930b70b04d8aabb3b54e2c9d79fea4
+
+COCOAPODS: 1.10.1

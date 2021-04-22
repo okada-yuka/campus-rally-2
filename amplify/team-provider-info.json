@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-campusrally-dev-15512-authRole",
+      "UnauthRoleArn": "arn:aws:iam::509430456398:role/amplify-campusrally-dev-15512-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::509430456398:role/amplify-campusrally-dev-15512-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-campusrally-dev-15512-deployment",
+      "UnauthRoleName": "amplify-campusrally-dev-15512-unauthRole",
+      "StackName": "amplify-campusrally-dev-15512",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:509430456398:stack/amplify-campusrally-dev-15512/2e8a8250-a1f9-11eb-aec0-0ea611ef84b3",
+      "AmplifyAppId": "di4x66bo1i19f"
+    },
+    "categories": {
+      "auth": {
+        "campusrallyab45f1b4": {}
+      }
+    }
+  }
+}

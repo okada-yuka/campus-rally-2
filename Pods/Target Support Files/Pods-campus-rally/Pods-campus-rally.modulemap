@@ -1,0 +1,6 @@
+framework module Pods_campus_rally {
+  umbrella header "Pods-campus-rally-umbrella.h"
+
+  export *
+  module * { export * }
+}

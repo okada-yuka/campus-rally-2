@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5tD-nd-pOz">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MPLUSRounded1c-Bold.ttf">
+            <string>RoundedMplus1c-Bold</string>
+        </array>
+        <array key="MPLUSRounded1c-Regular.ttf">
+            <string>RoundedMplus1c-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tesseract View Controller-->
+        <scene sceneID="Sck-t4-CGt">
+            <objects>
+                <viewController id="CyH-gL-3Tq" customClass="TesseractViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTR-k6-2PW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GLQ-Vg-YD0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hD3-mm-Xcx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bl6-gE-GKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-637" y="-606"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="6bQ-0B-1QZ">
+            <objects>
+                <viewController id="HgP-vD-UwT" customClass="ImageViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K26-LW-12E">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKM-Fa-FF6">
+                                <rect key="frame" x="48" y="122" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGu-DB-SZr">
+                                <rect key="frame" x="48" y="258" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-zw-elC">
+                                <rect key="frame" x="48" y="394" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLg-Qw-DNC">
+                                <rect key="frame" x="48" y="530" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-Nt-zDW">
+                                <rect key="frame" x="48" y="666" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kyi-le-ogo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8JS-46-nnT"/>
+                    <connections>
+                        <outlet property="blurImageView" destination="Tfq-Nt-zDW" id="hLH-sI-kNs"/>
+                        <outlet property="dstImageView" destination="gGu-DB-SZr" id="zDV-30-ujs"/>
+                        <outlet property="dstImageView2" destination="pj0-zw-elC" id="TAx-xn-yTW"/>
+                        <outlet property="grayImageView" destination="YLg-Qw-DNC" id="iMW-k1-IxN"/>
+                        <outlet property="srcImageView" destination="JKM-Fa-FF6" id="E9Y-d0-URa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8BW-NP-9CU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="-624"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u3O-kc-ij5">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-xx-bAB">
+                                <rect key="frame" x="7" y="50" width="376" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キャンパスを回ってクエストをクリアしよう！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Zd-dng">
+                                <rect key="frame" x="27" y="124" width="337" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-aB-wct">
+                                <rect key="frame" x="206" y="89" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-HF-QsX">
+                                <rect key="frame" x="51" y="63" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="username">
+                                    <color key="titleColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbK-wh-nY6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eQP-ZE-61B"/>
+                    <connections>
+                        <outlet property="mapView" destination="u3O-kc-ij5" id="9IN-HY-nNW"/>
+                        <outlet property="progressBar" destination="SSO-aB-wct" id="3mb-xZ-N5c"/>
+                        <outlet property="usernameButton" destination="qfE-HF-QsX" id="PfM-44-EmB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.46153846153845" y="38.388625592417057"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jLa-uK-C5k">
+            <objects>
+                <viewController storyboardIdentifier="NR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl7-KR-WWy" customClass="NRViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b5a-Id-yL2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpB-WG-oTM">
+                                <rect key="frame" x="86" y="569" width="272" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="生協コンビニのレシートを撮影する"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="MqY-Hb-1gr"/>
+                                    <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="lLv-re-eSy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxu-LG-VTM">
+                                <rect key="frame" x="86" y="627" width="238" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="おいしんぼ横丁でご飯を食べる"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="sG4-9b-DLD"/>
+                                    <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="vBg-dR-Yp7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YF-Ff-D5q">
+                                <rect key="frame" x="86" y="503" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="mainQuest:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="0MK-eB-3FX"/>
+                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="hJf-4w-TEj"/>
+                                    <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="q1o-GV-Ouc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rWy-F1-Qpk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainQuest" destination="8YF-Ff-D5q" id="P40-Oc-gae"/>
+                        <outlet property="subQuest_1" destination="NpB-WG-oTM" id="eT3-eW-v97"/>
+                        <outlet property="subQuest_2" destination="Sxu-LG-VTM" id="Z8M-zh-7QC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="StW-1r-fw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.9230769230769" y="27.014218009478672"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9xL-Do-vKe">
+            <objects>
+                <viewController id="DmF-wP-5z2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPa-dS-P81">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CBa-o6-Y69"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fSK-Mw-stV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfI-Fv-vaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2212" y="-46"/>
+        </scene>
+        <!--Pick Image View Controller-->
+        <scene sceneID="E1y-hv-JTX">
+            <objects>
+                <viewController id="qxJ-YY-dp3" customClass="PickImageViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCa-gS-ldG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Crp-a9-6ky"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7HA-az-zay"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqb-RT-13o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1417" y="-311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YzF-An-1SB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5tD-nd-pOz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1X-3V-SJr">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5vN-3w-fWo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOq-kI-oeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="38.839285714285715"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="tuo-Yw-RJ9">
+            <objects>
+                <viewController id="L8f-9n-T86" customClass="TestViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4A9-ix-Dau">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-BX-YEw">
+                                <rect key="frame" x="172" y="379" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushButtonWithSender:" destination="L8f-9n-T86" eventType="touchUpInside" id="VWQ-Ay-5Yy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pdx-wS-8yC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dl7-j2-mEi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAt-Bc-yM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1388" y="366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ARb-GL-wwK">
+            <objects>
+                <viewController storyboardIdentifier="KC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2MD-MU-XhL" customClass="KCViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="JM" id="ql2-zQ-39O">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="ZDT-u3-KnX">
+                                <rect key="frame" x="64" y="555" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-Ry-Wqq">
+                                <rect key="frame" x="64" y="598" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE7-Ja-aRt">
+                                <rect key="frame" x="123" y="591" width="170" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="被験者実験に参加する"/>
+                                <connections>
+                                    <action selector="subQuest_1:" destination="2MD-MU-XhL" eventType="touchUpInside" id="kPr-XU-VPc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-7j-iLj">
+                                <rect key="frame" x="127" y="553" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="2MD-MU-XhL" eventType="touchUpInside" id="SqI-3D-BvU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="NMb-zM-5Fq">
+                                <rect key="frame" x="64" y="634" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-fr-J5a">
+                                <rect key="frame" x="224" y="682" width="122" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="香知館 KOCHIKAN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FX-r8-WUB">
+                                <rect key="frame" x="147" y="448" width="214" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-u9-EEV">
+                                <rect key="frame" x="122" y="637" width="221" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="社会情報学研究室を見学する"/>
+                                <connections>
+                                    <action selector="subQuest_2:" destination="2MD-MU-XhL" eventType="touchUpInside" id="l9l-Mb-BZk"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-Jy-Gzz">
+                                <rect key="frame" x="124" y="433" width="142" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KC" translatesAutoresizingMaskIntoConstraints="NO" id="kfI-lK-8Sf">
+                                <rect key="frame" x="16" y="433" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g9j-BA-Rks"/>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="ZDT-u3-KnX" id="uVR-Ma-9KM"/>
+                        <outlet property="image2" destination="Peh-Ry-Wqq" id="goI-Kl-7Ok"/>
+                        <outlet property="image3" destination="NMb-zM-5Fq" id="kKf-fb-bMi"/>
+                        <outlet property="imageView" destination="hPY-fr-J5a" id="saS-sU-NtS"/>
+                        <outlet property="mainQuest" destination="Zlu-7j-iLj" id="frb-5i-uy5"/>
+                        <outlet property="subQuest_1" destination="wE7-Ja-aRt" id="eDm-wR-ouS"/>
+                        <outlet property="subQuest_2" destination="GeR-u9-EEV" id="tko-5g-2Ja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ode-cP-PcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-609.23076923076917" y="704.50236966824639"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="R67-ne-UFd">
+            <objects>
+                <viewController storyboardIdentifier="Library" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gsX-8J-Nzs" customClass="LibraryViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWP-FD-iI4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4w-0e-R7I">
+                                <rect key="frame" x="231" y="682" width="122" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-r2-9gM">
+                                <rect key="frame" x="71" y="553" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-mS-Mwu">
+                                <rect key="frame" x="71" y="596" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="3rN-ee-apx">
+                                <rect key="frame" x="71" y="632" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZJ-b1-Ef0">
+                                <rect key="frame" x="127" y="635" width="238" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="ラーニングコモンズを利用する"/>
+                                <connections>
+                                    <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="USB-Lw-zek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFn-PG-Mz9">
+                                <rect key="frame" x="136" y="589" width="85" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="本を借りる"/>
+                                <connections>
+                                    <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="Tnl-lH-gjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUr-Qt-cKF">
+                                <rect key="frame" x="134" y="551" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="8Md-Ym-jon"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-Nn-9X4">
+                                <rect key="frame" x="124" y="434" width="142" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ラーネッド記念図書館" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op1-dz-6kj">
+                                <rect key="frame" x="35" y="455" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="図書館" translatesAutoresizingMaskIntoConstraints="NO" id="X01-OM-WIj">
+                                <rect key="frame" x="35" y="434" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pbs-r3-Yv7"/>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="BvP-r2-9gM" id="Uf9-AD-v2q"/>
+                        <outlet property="image2" destination="JKP-mS-Mwu" id="Wfp-J6-nCn"/>
+                        <outlet property="image3" destination="3rN-ee-apx" id="ZLY-j3-E7i"/>
+                        <outlet property="imageView" destination="K4w-0e-R7I" id="NHb-Fl-kE8"/>
+                        <outlet property="mainQuest" destination="lUr-Qt-cKF" id="ssK-Ad-msn"/>
+                        <outlet property="subQuest_1" destination="ZFn-PG-Mz9" id="Pit-Qx-140"/>
+                        <outlet property="subQuest_2" destination="lZJ-b1-Ef0" id="lAl-cR-OX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6Y-SP-EFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.538461538461533" y="703.79146919431275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kcj-8L-sL8">
+            <objects>
+                <viewController storyboardIdentifier="JM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ol-9G-sQx" customClass="JMViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b59-rd-eg0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="Fso-jj-hjW">
+                                <rect key="frame" x="70" y="559" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-Ix-aUM">
+                                <rect key="frame" x="70" y="602" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do5-t2-mey">
+                                <rect key="frame" x="132" y="605" width="152" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="学内LANに接続する"/>
+                                <connections>
+                                    <action selector="subQuest_1:" destination="2ol-9G-sQx" eventType="touchUpInside" id="Dkg-ti-aOF"/>
+                                    <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="d7T-Oh-Dne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-uX-Ev3">
+                                <rect key="frame" x="133" y="557" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="Jxy-8K-NK3"/>
+                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="PwR-wH-uaG"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="NAT-QK-tXV">
+                                <rect key="frame" x="70" y="638" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4F-ii-JLD">
+                                <rect key="frame" x="131" y="643" width="153" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="プリンタを利用する"/>
+                                <connections>
+                                    <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="45O-hM-MY5"/>
+                                    <action selector="subQuest_2:" destination="2ol-9G-sQx" eventType="touchUpInside" id="sEd-zD-Pkf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dyj-0N-pyU">
+                                <rect key="frame" x="237" y="683" width="122" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="情報メディア館" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-6N-WNT">
+                                <rect key="frame" x="115" y="459" width="224" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="swg-mI-XTW">
+                                <rect key="frame" x="124" y="434" width="142" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JM" translatesAutoresizingMaskIntoConstraints="NO" id="59s-CG-niC">
+                                <rect key="frame" x="39" y="434" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j5U-j5-zCe"/>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="Fso-jj-hjW" id="T0T-Kb-aed"/>
+                        <outlet property="image2" destination="kBa-Ix-aUM" id="mTO-VG-lUP"/>
+                        <outlet property="image3" destination="NAT-QK-tXV" id="Md3-ba-7Bb"/>
+                        <outlet property="imageView" destination="Dyj-0N-pyU" id="Fpo-pK-dSI"/>
+                        <outlet property="mainQuest" destination="7oT-uX-Ev3" id="S6C-Oi-GRG"/>
+                        <outlet property="subQuest_1" destination="do5-t2-mey" id="Q5q-ba-ShO"/>
+                        <outlet property="subQuest_2" destination="L4F-ii-JLD" id="fyb-wB-69z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8x-yC-kNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827.69230769230762" y="703.79146919431275"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="JM" width="190" height="190"/>
+        <image name="KC" width="190" height="190"/>
+        <image name="checkbox_false" width="1299" height="1299"/>
+        <image name="homeIndicator" width="134" height="5"/>
+        <image name="white" width="356" height="103"/>
+        <image name="図書館" width="190" height="190"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
