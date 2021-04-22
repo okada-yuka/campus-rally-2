@@ -72,10 +72,18 @@ class NRViewController: UIViewController, UITextFieldDelegate {
 //        image1.image = image
 //        appDelegate.library_quest[0] = true
 //        check_clear()
-        //mainQuest.isEnabled = false
-        print("0.05をたす")
-        self.appDelegate.progress_sum += 0.05
+        mainQuest.isEnabled = false
 
+
+    }
+    
+    func addProgress(){
+        print(result)
+        if (result == true){
+            print("0.05をたす")
+            self.appDelegate.progress_sum += 0.05
+        }
+        print("終わりました")
     }
 
 }
@@ -107,8 +115,6 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
         // UIImageに変換する（これじゃjpegに変換した意味がなくなる？でも引数UIImageだからなぁ）
         image_UIImage = UIImage(data: image_jpeg)
         
-        // 写真を選ぶビューを引っ込める
-        self.dismiss(animated: true)
         
 //        // クルクルスタート
 //        ActivityIndicator.startAnimating()
@@ -121,5 +127,10 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
         print(result)
 //        // クルクルストップ
 //        ActivityIndicator.stopAnimating()
+        
+        // 写真を選ぶビューを引っ込める
+        self.dismiss(animated: true)
+        
+        addProgress()
     }
 }

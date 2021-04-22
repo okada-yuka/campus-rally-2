@@ -36,6 +36,7 @@
 		C1D8317226315783000B89AC /* NRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8317126315783000B89AC /* NRViewController.swift */; };
 		C1D8317526315B3A000B89AC /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8317426315B3A000B89AC /* functions.swift */; };
 		C1D8317926316C1C000B89AC /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8317826316C1C000B89AC /* PickImageViewController.swift */; };
+		C1D831802631C6F8000B89AC /* RGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8317F2631C6F8000B89AC /* RGViewController.swift */; };
 		F95A70B55C57445C6437D251 /* Pods_campus_rally.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C51C214EC150A1ED426922 /* Pods_campus_rally.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		C1D8317126315783000B89AC /* NRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRViewController.swift; sourceTree = "<group>"; };
 		C1D8317426315B3A000B89AC /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		C1D8317826316C1C000B89AC /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
+		C1D8317F2631C6F8000B89AC /* RGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGViewController.swift; sourceTree = "<group>"; };
 		C7DCA8DACE0F405BA55D3A29 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,28 +140,14 @@
 				C182B9352630353B00321F08 /* opencv2.framework */,
 				C14064A6262DA03200989D4F /* AppDelegate.swift */,
 				C14064A8262DA03200989D4F /* SceneDelegate.swift */,
-				C14064AA262DA03200989D4F /* MapViewController.swift */,
-				C1406531262F09A700989D4F /* KosugiMaru-Regular.ttf */,
 				C14064AC262DA03200989D4F /* Main.storyboard */,
 				C14064AF262DA03300989D4F /* Assets.xcassets */,
 				C14064B1262DA03300989D4F /* LaunchScreen.storyboard */,
-				C1406539262F0A4000989D4F /* MPLUSRounded1c-Black.ttf */,
-				C140653D262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf */,
-				C140653C262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf */,
-				C140653B262F0A4100989D4F /* MPLUSRounded1c-Light.ttf */,
-				C140653A262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf */,
-				C1406538262F0A4000989D4F /* MPLUSRounded1c-Regular.ttf */,
-				C140653E262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf */,
-				C14064B4262DA03300989D4F /* Info.plist */,
-				C14064E5262DA22700989D4F /* LibraryViewController.swift */,
-				C14064E8262DAB1900989D4F /* KCViewController.swift */,
-				C14064EB262DADCB00989D4F /* JMViewController.swift */,
-				C1406502262ECB7D00989D4F /* TestViewController.swift */,
-				C182B93D26303A6E00321F08 /* ImageViewController.swift */,
-				C182B94026303D5000321F08 /* TesseractViewController.swift */,
-				C1D8317126315783000B89AC /* NRViewController.swift */,
+				C1D8317C2631C64D000B89AC /* Test */,
+				C1D8317B2631C62A000B89AC /* Fonts */,
+				C1D8317D2631C671000B89AC /* ViewControllers */,
 				C1D8317426315B3A000B89AC /* functions.swift */,
-				C1D8317826316C1C000B89AC /* PickImageViewController.swift */,
+				C14064B4262DA03300989D4F /* Info.plist */,
 			);
 			path = "campus-rally";
 			sourceTree = "<group>";
@@ -172,6 +160,45 @@
 				A5C51C214EC150A1ED426922 /* Pods_campus_rally.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1D8317B2631C62A000B89AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C1406531262F09A700989D4F /* KosugiMaru-Regular.ttf */,
+				C1406539262F0A4000989D4F /* MPLUSRounded1c-Black.ttf */,
+				C140653D262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf */,
+				C140653C262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf */,
+				C140653B262F0A4100989D4F /* MPLUSRounded1c-Light.ttf */,
+				C1406538262F0A4000989D4F /* MPLUSRounded1c-Regular.ttf */,
+				C140653E262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf */,
+				C140653A262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C1D8317C2631C64D000B89AC /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C1406502262ECB7D00989D4F /* TestViewController.swift */,
+				C182B94026303D5000321F08 /* TesseractViewController.swift */,
+				C182B93D26303A6E00321F08 /* ImageViewController.swift */,
+				C1D8317826316C1C000B89AC /* PickImageViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		C1D8317D2631C671000B89AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C14064E8262DAB1900989D4F /* KCViewController.swift */,
+				C14064AA262DA03200989D4F /* MapViewController.swift */,
+				C14064E5262DA22700989D4F /* LibraryViewController.swift */,
+				C14064EB262DADCB00989D4F /* JMViewController.swift */,
+				C1D8317126315783000B89AC /* NRViewController.swift */,
+				C1D8317F2631C6F8000B89AC /* RGViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +333,7 @@
 				C14064AB262DA03200989D4F /* MapViewController.swift in Sources */,
 				C14064A7262DA03200989D4F /* AppDelegate.swift in Sources */,
 				C14064E6262DA22700989D4F /* LibraryViewController.swift in Sources */,
+				C1D831802631C6F8000B89AC /* RGViewController.swift in Sources */,
 				C14064A9262DA03200989D4F /* SceneDelegate.swift in Sources */,
 				C182B93E26303A6E00321F08 /* ImageViewController.swift in Sources */,
 				C1D8317926316C1C000B89AC /* PickImageViewController.swift in Sources */,
