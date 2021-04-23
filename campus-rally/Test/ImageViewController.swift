@@ -25,7 +25,7 @@ class ImageViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //元画像
-        let image = UIImage(named: "receipt")!
+        let image = UIImage(named: "kochikan")!
         self.srcImageView.image = image
         
         //グレイスケール化

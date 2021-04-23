@@ -22,7 +22,7 @@ class functions: NSObject {
         
         //グレイスケール化
         let gray_image = convertColor(source: image)
-        
+
         //ぼかし
         let blur_image = toBlur(source: gray_image)
         
@@ -72,41 +72,50 @@ class functions: NSObject {
         
         
         return false
-//        print(correct_labels)
-//        print(correct_labels[0].count)
-//        print(correct_labels[1].count)
-//        print(correct_labels[2].count)
-//
-//        for c_label in correct_labels{
-//            print(c_label)
-//            for chr in c_label{
-//                print(c_label[3])
-//            }
-//        }
-//        return true
-//        for c_label in correct_labels{
-//            for chr in c_label{
-//    //            print(chr)
-//                // correct_labelを1文字ずつinput_textと比較し、含まれていない場合falseを返す
-//                if (!input_text.contains(chr)){
-//                    print("break")
-//                    print(chr)
-//                    print(c_label)
-//                    break
-//                }
-//                if (chr == c_label[c_label.count]){
-//                    print("最後まで回った")
-//                    print(chr)
-//                    print(c_label[length(c_label)])
-//                    print()
-//                }
-//                print(chr)
-//            }
-////            print(c_label)
-//            return true
-//        }
-//        return false
+
     }
+    
+    // gray_imageとdst_imageを表示する関数
+    class func charactor_recognition_view(imageView: UIImageView, imageView2: UIImageView, input_image: UIImage) -> String{
+
+        print("start")
+        let swiftyTesseract = SwiftyTesseract(language: RecognitionLanguage.japanese)
+        var text = ""
+        //元画像
+        let image = input_image
+        
+        //グレイスケール化
+        let gray_image = convertColor(source: image)
+        
+        imageView.image = gray_image
+        
+        //ぼかし
+        let blur_image = toBlur(source: gray_image)
+        
+        //閾値処理
+        //単純閾値処理
+        let dst_Image = convertThresh(source: gray_image)
+        let dst_Image2 = convertThresh(source: blur_image)
+        
+        imageView2.image = dst_Image2
+        
+        let start = Date()
+
+        //let fileName = "kochikan.JPG"
+        //guard let image_out = dst_Image2 else { return }
+
+        swiftyTesseract.performOCR(on: dst_Image2) { recognizedString in
+            guard let text_out = recognizedString else { return }
+//            print("\(text_out)")
+            
+            text = text_out
+        }
+        
+        print("end")
+        
+        return text
+    }
+    
 }
 
 func convertColor(source srcImage: UIImage) -> UIImage {

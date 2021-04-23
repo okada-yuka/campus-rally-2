@@ -21,6 +21,8 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     
 //    var ActivityIndicator: UIActivityIndicatorView!
 
+    @IBOutlet weak var gray_image: UIImageView!
+    @IBOutlet weak var dst_image2: UIImageView!
     @IBOutlet weak var mainQuest: UIButton!
     @IBOutlet weak var subQuest_1: UIButton!
     @IBOutlet weak var subQuest_2: UIButton!
@@ -72,7 +74,7 @@ class NRViewController: UIViewController, UITextFieldDelegate {
 //        image1.image = image
 //        appDelegate.library_quest[0] = true
 //        check_clear()
-        mainQuest.isEnabled = false
+        
 
 
     }
@@ -82,8 +84,9 @@ class NRViewController: UIViewController, UITextFieldDelegate {
         if (result == true){
             print("0.05をたす")
             self.appDelegate.progress_sum += 0.05
+            mainQuest.isEnabled = false
         }
-        print("終わりました")
+        
     }
 
 }
@@ -120,10 +123,12 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
 //        ActivityIndicator.startAnimating()
         
         // 文字認識
-        print(functions.charactor_recognition(input_image: image_UIImage))
+        let out_text = functions.charactor_recognition_view(imageView: self.gray_image, imageView2: dst_image2, input_image: image_UIImage)
+        print(out_text)
+                //image_UIImage))
         
         // 正誤判定
-        result = functions.judgement(input_text: functions.charactor_recognition(input_image: image_UIImage), correct_labels: "KOCHIKAN", "香知館", "kochikan")
+        result = functions.judgement(input_text: out_text, correct_labels: "KOCHIKAN", "香知館", "kochikan")
         print(result)
 //        // クルクルストップ
 //        ActivityIndicator.stopAnimating()
