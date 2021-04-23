@@ -11,30 +11,54 @@ import UIKit
 
 class LibraryViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
-    @IBOutlet weak var imageView: UIImageView!
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var image = UIImage()
+    var image_jpeg: Data!
+    var image_UIImage: UIImage!
+    var result: Bool!
+
+
+    @IBOutlet weak var gray_image: UIImageView!
+    @IBOutlet weak var dst_image2: UIImageView!
+    
+    
+    @IBOutlet weak var image_mainQuest: UIImageView!
+    @IBOutlet weak var image_subQuest_1: UIImageView!
+    @IBOutlet weak var image_subQuest_2: UIImageView!
+    
     @IBOutlet weak var mainQuest: UIButton!
     @IBOutlet weak var subQuest_1: UIButton!
     @IBOutlet weak var subQuest_2: UIButton!
-
-    
-    
-    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var alert: UIAlertController!
     var alertTextField: UITextField!
     
+    var num = 0
+    var correct_label = [["学生証"], ["1", "1階"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 現在のクリア状況を反映する
+        for (index, clear) in appDelegate.clear[0].enumerated(){
+            if (clear){
+                switch index {
+                case 0:
+                    mainQuest.isEnabled = false
+                case 1:
+                    subQuest_1.isEnabled = false
+                case 2:
+                    subQuest_2.isEnabled = false
+                default:
+                    break
+                }
+            }
+        }
         
         // 背景を透明にする
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         
+        // 白背景のViewにする
         let drawView = DrawView(frame: self.view.bounds)
         self.view.addSubview(drawView)
         // drawViewを最背面にする
@@ -42,107 +66,27 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
         // Mapに戻った時にMapViewControllerのViewWillAppearを呼び出す（iOS13以降で必要）
         if #available(iOS 13.0, *) {
             presentingViewController?.beginAppearanceTransition(true, animated: animated)
             presentingViewController?.endAppearanceTransition()
         }
-        
-        
-//        // カメラ起動でない場合のみprogressを反映
-//        if (camera_flag == false){
-//            print("カメラ起動でないです")
-//            print(self.appDelegate.progress_sum)
-//            self.appDelegate.progress += self.appDelegate.progress_sum
-//        }else{
-//            print("カメラ起動です")
-//            print(self.appDelegate.progress)
-//            camera_flag = false
-//        }
-        
     }
     
-    @IBAction func startCamera(_ sender: Any) {
+    @IBAction func mainQuest(_ sender: Any) {
+        num = 0
         functions.set_cameraQuest(vc: self)
-//        let c = UIAlertController(title: nil, message: "看板を撮影する", preferredStyle: .actionSheet)
-//        c.addAction(UIAlertAction(title: "カメラを起動する", style: .default, handler: { action in
-//            let pc = UIImagePickerController()
-//            pc.sourceType = .camera
-//            pc.delegate = self
-//            self.present(pc, animated: true, completion: nil)
-//        }))
-//        c.addAction(UIAlertAction(title: "アルバムから選択する", style: .default, handler: { action in
-//            // カメラロールが利用可能か？
-//            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-//                // 写真を選ぶビュー
-//                let pickerView = UIImagePickerController()
-//                // 写真の選択元をカメラロールにする
-//                pickerView.sourceType = .photoLibrary
-//                // デリゲート
-//                pickerView.delegate = self
-//                // ビューに表示
-//                self.present(pickerView, animated: true)
-//            }
-//        }))
-//        c.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: { action in
-//            print("cancelled") // → 外側のビューをタップ or キャンセルボタンタップでここが呼ばれる
-//        }))
-//
-//        present(c, animated: true, completion: nil)
-//
-//
-//        self.appDelegate.camera_flag = true
-
-        
-        // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
-        // 画像を読み込み
-//        let image = UIImage(named: "checkbox_true")
-//        // Image Viewに読み込んだ画像をセット
-//        image1.image = image
-//        appDelegate.library_quest[0] = true
-//        check_clear()
-//        mainQuest.isEnabled = false
-//        print("0.05をたす")
-//        self.appDelegate.progress_sum += 0.05
-
-        
-//        let storyboard: UIStoryboard = self.storyboard!
-//        let mapViewController: MapViewController = storyboard.instantiateViewController(withIdentifier: "Map") as! MapViewController
-//        mapViewController.progressBar.progress += 0.5
-        
-        //self.appDelegate.progress += progress_sum
-        
-        
-    }
-
-    @IBAction func subQuest_1(_ sender: Any) {
-        // 確認のポップアップをつけてみてもいいかも
-        
-        // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
-        // 画像を読み込み
-        let image = UIImage(named: "checkbox_true")
-        // Image Viewに読み込んだ画像をセット
-        image2.image = image
-        appDelegate.library_quest[1] = true
-        check_clear()
-        self.subQuest_1.isEnabled = false
-        self.appDelegate.progress_sum += 0.05
     }
     
-    @IBAction func subQuest_2(_ sender: Any) {
-        // 確認のポップアップをつけてみてもいいかも
-
+    @IBAction func subQuest_1(_ sender: Any) {
+        num = 1
         alert = UIAlertController(
-            title: "ラーニングコモンズを利用する",
-            message: "ラーニングコモンズは\n何階にありましたか？",
+            title: "図書館を利用する",
+            message: "図書館に入る際に必要なものは何でしょう？",
             preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
                 self.alertTextField = textField
-                // textField.placeholder = "Mike"
-                // textField.isSecureTextEntry = true
         })
         alert.addAction(
             UIAlertAction(
@@ -153,56 +97,57 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                
-                if (self.textFieldShouldReturn(textField: self.alertTextField)) {
-                    print("正解です")
-                    
-                    // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
-                    // 画像を読み込み
-                    let image = UIImage(named: "checkbox_true")
-                    // Image Viewに読み込んだ画像をセット
-                    self.image3.image = image
-                    self.appDelegate.library_quest[2] = true
-                    self.subQuest_2.isEnabled = false
-                    self.appDelegate.progress_sum += 0.05
-                }else{
-                    
-                }
-                
-                
-
+                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_1, imageView: self.image_subQuest_1, result: true)
             }
         )
 
         self.present(alert, animated: true, completion: nil)
-        
     
+    }
+    
+    @IBAction func subQuest_2(_ sender: Any) {
+        num = 2
+        alert = UIAlertController(
+            title: "ラーニングコモンズを利用する",
+            message: "ラーニングコモンズは何階にあるでしょう？",
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(
+            configurationHandler: {(textField: UITextField!) in
+                self.alertTextField = textField
+        })
+        alert.addAction(
+            UIAlertAction(
+                title: "Cancel",
+                style: UIAlertAction.Style.cancel,
+                handler: nil))
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: UIAlertAction.Style.default) { _ in
+                functions.reflect_result(facility_num: 3, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
+            }
+        )
+
+        self.present(alert, animated: true, completion: nil)
     }
     
     //Returnキー押下時の呼び出しメソッド
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if(textField.text == "1" || textField.text == "1階") {
+
+        if (num == 1) {
+            return true
+        }
+        
+        if (correct_label[num-1].contains(textField.text!)) {
             return true
         } else {
             alert.message = "回答が間違っています"
-            print("間違っている")
             return false
         }
-    }
-    
-    // clearかを判定し、その場合画像を表示する
-    func check_clear() -> Bool{
-        let isClear = appDelegate.library_quest.allSatisfy { $0 == true }
-        if isClear == true{
-            print("clear")
-            imageView.image = UIImage(named: "mark_sumi_checked")
-            return true
-        }else{
-            print("no")
-            return false
-        }
+
     }
 
+    
 }
 
 extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -211,12 +156,30 @@ extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        
         // 選択したor撮影した写真を取得する
-        let image = info[.originalImage] as! UIImage
-        // ビューに表示する
-        imageView.image = image
+        image = info[.originalImage] as! UIImage
+        
+        // JPEGに変換する
+        image_jpeg = image.jpegData(compressionQuality: 1)
+        
+        // UIImageに変換する（これじゃjpegに変換した意味がなくなる？でも引数UIImageだからなぁ）
+        image_UIImage = UIImage(data: image_jpeg)
+
+        // 文字認識
+        let out_text = functions.charactor_recognition_view(imageView: self.gray_image, imageView2: dst_image2, input_image: image_UIImage)
+        print(out_text)
+                //image_UIImage))
+        
+        // 正誤判定
+        result = functions.judgement(input_text: out_text, correct_labels: "LEARNED", "MEMORIAL", "LIBRARY")
+        print(result)
+
+        
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)
+        
+        functions.reflect_result(facility_num: 0, quest_num: 0, button: mainQuest, imageView: image_mainQuest, result: result)
     }
 }
-
