@@ -6,13 +6,10 @@
 //
 
 import UIKit
-import opencv2
-import SwiftyTesseract
 
 
 class NRViewController: UIViewController, UITextFieldDelegate {
 
-    let swiftyTesseract = SwiftyTesseract(language: RecognitionLanguage.japanese)
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var image = UIImage()
     var image_jpeg: Data!
@@ -36,6 +33,8 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     var alertTextField: UITextField!
     
     var num = 0
+    var correct_label = [["14", "2", "14時", "2時"], ["いも文", "めん風", "ふじカツ", "カリーハウス"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,15 +73,15 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func mainQuest(_ sender: Any) {
+        num = 0
         functions.set_cameraQuest(vc: self)
-        // 結果を受け取る前に処理終了しているため注意
     }
     
     @IBAction func subQuest_1(_ sender: Any) {
-        
+        num = 1
         alert = UIAlertController(
-            title: "ラーニングコモンズを利用する",
-            message: "ラーニングコモンズは\n何階にありましたか？",
+            title: "ラッテでご飯を食べる",
+            message: "アマークバーガーが食べられるのは\n何時からでしょう？",
             preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
@@ -99,21 +98,19 @@ class NRViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 2, quest_num: 1, button: self.subQuest_1, imageView: self.image_subQuest_1, result: self.textFieldShouldReturn(textField: self.alertTextField))
-
+                functions.reflect_result(facility_num: 2, quest_num: self.num, button: self.subQuest_1, imageView: self.image_subQuest_1, result: self.textFieldShouldReturn(textField: self.alertTextField))
             }
         )
 
         self.present(alert, animated: true, completion: nil)
-        
     
     }
     
     @IBAction func subQuest_2(_ sender: Any) {
-        
+        num = 2
         alert = UIAlertController(
-            title: "ラーニングコモンズを利用する",
-            message: "ラーニングコモンズは\n何階にありましたか？",
+            title: "おいしんぼ横丁でご飯を食べる",
+            message: "食べたお店の名前を入力してください。",
             preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
@@ -130,7 +127,7 @@ class NRViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 2, quest_num: 2, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
+                functions.reflect_result(facility_num: 2, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
             }
         )
 
@@ -139,11 +136,11 @@ class NRViewController: UIViewController, UITextFieldDelegate {
     
     //Returnキー押下時の呼び出しメソッド
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if(textField.text == "1" || textField.text == "1階") {
+
+        if(correct_label[num-1].contains(textField.text!)) {
             return true
         } else {
             alert.message = "回答が間違っています"
-            print("間違っている")
             return false
         }
 
@@ -175,7 +172,7 @@ extension NRViewController: UIImagePickerControllerDelegate, UINavigationControl
                 //image_UIImage))
         
         // 正誤判定
-        result = functions.judgement(input_text: out_text, correct_labels: "KOCHIKAN", "香知館", "kochikan")
+        result = functions.judgement(input_text: out_text, correct_labels: "日糧館", "NICHIRYOKAN", "nichiryokan")
         print(result)
 
         
