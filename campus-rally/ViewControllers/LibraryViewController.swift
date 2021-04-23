@@ -7,35 +7,7 @@
 
 import UIKit
 
-class DrawView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame);
-        self.backgroundColor = UIColor.clear;
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func draw(_ rect: CGRect) {
-        
-        // ここにUIBezierPathを記述する
-        // 角が丸い四角形（短形）
-        let roundrRectangle = UIBezierPath(roundedRect: CGRect(x: 30, y: 420, width: 330, height: 300), cornerRadius: 10.0)
-        // 内側の色
-        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
-        // 内側を塗りつぶす
-        roundrRectangle.fill()
-//        // 線の色
-//        UIColor(red: 0, green: 0.8, blue: 0, alpha: 1.0).setStroke()
-//        // 線の太さ
-//        roundrRectangle.lineWidth = 2.0
-//        // 線を塗りつぶす
-//        roundrRectangle.stroke()
-    }
- 
-}
+
 
 class LibraryViewController: UIViewController, UITextFieldDelegate {
 
@@ -59,6 +31,9 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // 背景を透明にする
+        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         
         let drawView = DrawView(frame: self.view.bounds)
         self.view.addSubview(drawView)
@@ -90,47 +65,47 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func startCamera(_ sender: Any) {
-        
-        let c = UIAlertController(title: nil, message: "看板を撮影する", preferredStyle: .actionSheet)
-        c.addAction(UIAlertAction(title: "カメラを起動する", style: .default, handler: { action in
-            let pc = UIImagePickerController()
-            pc.sourceType = .camera
-            pc.delegate = self
-            self.present(pc, animated: true, completion: nil)
-        }))
-        c.addAction(UIAlertAction(title: "アルバムから選択する", style: .default, handler: { action in
-            // カメラロールが利用可能か？
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                // 写真を選ぶビュー
-                let pickerView = UIImagePickerController()
-                // 写真の選択元をカメラロールにする
-                pickerView.sourceType = .photoLibrary
-                // デリゲート
-                pickerView.delegate = self
-                // ビューに表示
-                self.present(pickerView, animated: true)
-            }
-        }))
-        c.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: { action in
-            print("cancelled") // → 外側のビューをタップ or キャンセルボタンタップでここが呼ばれる
-        }))
-        
-        present(c, animated: true, completion: nil)
-        
-        
-        self.appDelegate.camera_flag = true
+        functions.set_cameraQuest(vc: self)
+//        let c = UIAlertController(title: nil, message: "看板を撮影する", preferredStyle: .actionSheet)
+//        c.addAction(UIAlertAction(title: "カメラを起動する", style: .default, handler: { action in
+//            let pc = UIImagePickerController()
+//            pc.sourceType = .camera
+//            pc.delegate = self
+//            self.present(pc, animated: true, completion: nil)
+//        }))
+//        c.addAction(UIAlertAction(title: "アルバムから選択する", style: .default, handler: { action in
+//            // カメラロールが利用可能か？
+//            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//                // 写真を選ぶビュー
+//                let pickerView = UIImagePickerController()
+//                // 写真の選択元をカメラロールにする
+//                pickerView.sourceType = .photoLibrary
+//                // デリゲート
+//                pickerView.delegate = self
+//                // ビューに表示
+//                self.present(pickerView, animated: true)
+//            }
+//        }))
+//        c.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: { action in
+//            print("cancelled") // → 外側のビューをタップ or キャンセルボタンタップでここが呼ばれる
+//        }))
+//
+//        present(c, animated: true, completion: nil)
+//
+//
+//        self.appDelegate.camera_flag = true
 
         
         // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
         // 画像を読み込み
-        let image = UIImage(named: "checkbox_true")
-        // Image Viewに読み込んだ画像をセット
-        image1.image = image
-        appDelegate.library_quest[0] = true
-        check_clear()
-        mainQuest.isEnabled = false
-        print("0.05をたす")
-        self.appDelegate.progress_sum += 0.05
+//        let image = UIImage(named: "checkbox_true")
+//        // Image Viewに読み込んだ画像をセット
+//        image1.image = image
+//        appDelegate.library_quest[0] = true
+//        check_clear()
+//        mainQuest.isEnabled = false
+//        print("0.05をたす")
+//        self.appDelegate.progress_sum += 0.05
 
         
 //        let storyboard: UIStoryboard = self.storyboard!

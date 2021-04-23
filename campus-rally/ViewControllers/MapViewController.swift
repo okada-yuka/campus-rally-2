@@ -13,15 +13,11 @@ import AWSMobileClient
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-
     @IBOutlet weak var progressBar: UIProgressView!
-    
     @IBOutlet weak var usernameButton: UIButton!
     
     var signOutAlert: UIAlertController!
-    
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     let annotation = MKPointAnnotation()
     
     // 初期化
@@ -47,7 +43,6 @@ class MapViewController: UIViewController {
         annotation.subtitle = subtitle
         
         self.mapView.addAnnotation(annotation)
-        
     }
     
     override func viewDidLoad() {
@@ -142,14 +137,10 @@ class MapViewController: UIViewController {
         handler: { action in
             // サインアウト処理
             AWSMobileClient.sharedInstance().signOut()
-
-            
             // サインイン画面を表示
             AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (signInState, error) in
-                
-                // 初期表示画面（GoalView）に遷移する
+                // 初期表示画面に遷移する
                 self.navigationController?.popViewController(animated: true)
-                
                 if let signInState = signInState {
                     print("SignInしました")
                     self.appDelegate.username = AWSMobileClient.default().username
@@ -167,15 +158,14 @@ class MapViewController: UIViewController {
             style: UIAlertAction.Style.cancel,
             handler: nil
         )
-
+        
         //アラートアクションを追加する。
         signOutAlert.addAction(alertAction)
         signOutAlert.addAction(alertAction2)
 
-
     }
     
-    // カメラを起動するとMapに戻るため、Progressが更新されてしまう（どちらに合わせるか・・閉じる時にprogressの値を更新するようにするか）
+
     override func viewDidAppear(_ animated: Bool) {
         print("mapに戻ってきた")
         super.viewDidAppear(animated)
@@ -210,21 +200,19 @@ extension MapViewController: MKMapViewDelegate{
     //アノテーションビューを返すメソッド
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
-        //アノテーションビューを作成する。
+        //アノテーションビューを作成する
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
-        //吹き出しを表示可能に。
+        //吹き出しを表示可能にする
         pinView.canShowCallout = true
 
         let button = UIButton()
         button.frame = CGRect(x:0,y:0,width:80,height:40)
-//        button.setTitle("クエスト", for: .normal)
-//
-//        button.setTitleColor(UIColor.white, for: .normal)
-//        button.backgroundColor = #colorLiteral(red: 0.6784008145, green: 0.5490569472, blue: 0.7371662259, alpha: 1)
-        
+
+        // 吹き出しのボタンの画像を設定
         button.setImage(UIImage(named: "pin_purple")!, for: .normal)
         
+        // ピンの画像を設定
         pinView.image = UIImage(named: "pin_purple")!
         pinView.annotation = annotation
         pinView.canShowCallout = true
@@ -262,9 +250,6 @@ extension MapViewController: MKMapViewDelegate{
                         pinView.annotation = annotation
                         pinView.canShowCallout = true
         }
-        //button.addTarget(self, action: #selector(sendLocation), for: .touchUpInside)
-        
-        
         
         return pinView
     }
@@ -272,45 +257,35 @@ extension MapViewController: MKMapViewDelegate{
     //OKボタン押下時の処理
     @objc func sendLocation(){
         let storyboard: UIStoryboard = self.storyboard!
-           // ②遷移先ViewControllerのインスタンス取得
            let nextView = storyboard.instantiateViewController(withIdentifier: "Library")
-           // ③画面遷移
            self.present(nextView, animated: true, completion: nil)
         print("図書館が呼ばれました")
     }
     
     @objc func sendLocation_kc(){
         let storyboard: UIStoryboard = self.storyboard!
-           // ②遷移先ViewControllerのインスタンス取得
            let nextView = storyboard.instantiateViewController(withIdentifier: "KC")
-           // ③画面遷移
            self.present(nextView, animated: true, completion: nil)
         print("KCが呼ばれました")
     }
     
     @objc func sendLocation_jm(){
         let storyboard: UIStoryboard = self.storyboard!
-       // ②遷移先ViewControllerのインスタンス取得
        let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
-       // ③画面遷移
        self.present(nextView, animated: true, completion: nil)
         print("JMが呼ばれました")
     }
     
     @objc func sendLocation_nr(){
         let storyboard: UIStoryboard = self.storyboard!
-       // ②遷移先ViewControllerのインスタンス取得
        let nextView = storyboard.instantiateViewController(withIdentifier: "NR")
-       // ③画面遷移
        self.present(nextView, animated: true, completion: nil)
         print("NRが呼ばれました")
     }
     
     @objc func sendLocation_rg(){
         let storyboard: UIStoryboard = self.storyboard!
-       // ②遷移先ViewControllerのインスタンス取得
        let nextView = storyboard.instantiateViewController(withIdentifier: "RG")
-       // ③画面遷移
        self.present(nextView, animated: true, completion: nil)
         print("RGが呼ばれました")
     }

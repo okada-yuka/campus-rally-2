@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var progress_sum: Float = 0
     var camera_flag: Bool = false
     
+    
+    // クエストクリア状況（図書館、理化学館、日糧館、情報メディア館、香知館の順）
+    var clear: [[Bool]] = [[false, false, false], [false, false, false], [false, false, false], [false, false, false], [false, false, false]]
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
