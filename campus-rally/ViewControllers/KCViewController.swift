@@ -32,13 +32,13 @@ class KCViewController: UIViewController {
     var alertTextField: UITextField!
     
     var num = 0
-    var correct_label = [["学生証"], ["1", "1階"]]
+    var correct_label = [[], ["SIL"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 現在のクリア状況を反映する
-        for (index, clear) in appDelegate.clear[0].enumerated(){
+        for (index, clear) in appDelegate.clear[4].enumerated(){
             if (clear){
                 switch index {
                 case 0:
@@ -79,8 +79,8 @@ class KCViewController: UIViewController {
     @IBAction func subQuest_1(_ sender: Any) {
         num = 1
         alert = UIAlertController(
-            title: "図書館を利用する",
-            message: "図書館に入る際に必要なものは何でしょう？",
+            title: "被験者実験に参加する",
+            message: "実施した教室名を入力してください。",
             preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
@@ -95,7 +95,7 @@ class KCViewController: UIViewController {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_1, imageView: self.image_subQuest_1, result: true)
+                functions.reflect_result(facility_num: 4, quest_num: self.num, button: self.subQuest_1, imageView: self.image_subQuest_1, result: true)
             }
         )
 
@@ -106,8 +106,8 @@ class KCViewController: UIViewController {
     @IBAction func subQuest_2(_ sender: Any) {
         num = 2
         alert = UIAlertController(
-            title: "ラーニングコモンズを利用する",
-            message: "ラーニングコモンズは何階にあるでしょう？",
+            title: "社会情報学研究室を見学する",
+            message: "社会情報学研究室の略称は何でしょう？",
             preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
@@ -122,7 +122,7 @@ class KCViewController: UIViewController {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 3, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
+                functions.reflect_result(facility_num: 4, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
             }
         )
 
@@ -148,7 +148,7 @@ class KCViewController: UIViewController {
     
 }
 
-extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension KCViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }
@@ -171,13 +171,13 @@ extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationCo
                 //image_UIImage))
         
         // 正誤判定
-        result = functions.judgement(input_text: out_text, correct_labels: "LEARNED", "MEMORIAL", "LIBRARY")
+        result = functions.judgement(input_text: out_text, correct_labels: "香知館", "kochikan", "KOCHIKAN")
         print(result)
 
         
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)
         
-        functions.reflect_result(facility_num: 0, quest_num: 0, button: mainQuest, imageView: image_mainQuest, result: result)
+        functions.reflect_result(facility_num: 4, quest_num: 0, button: mainQuest, imageView: image_mainQuest, result: result)
     }
 }

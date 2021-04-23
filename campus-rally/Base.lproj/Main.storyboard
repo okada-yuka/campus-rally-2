@@ -367,12 +367,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcA-We-Tku">
-                                <rect key="frame" x="73" y="696" width="238" height="36"/>
+                                <rect key="frame" x="82" y="696" width="221" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="ラーニングコモンズを利用する"/>
+                                <state key="normal" title="社会情報学研究室を見学する"/>
                                 <connections>
                                     <action selector="subQuest_2:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="1K3-IO-NiP"/>
+                                    <action selector="subQuest_2:" destination="2MD-MU-XhL" eventType="touchUpInside" id="a6m-qX-flk"/>
                                     <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="uCw-7P-9wp"/>
                                 </connections>
                             </button>
@@ -384,6 +385,7 @@
                                 <connections>
                                     <action selector="mainQuest:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="5I5-sf-1AL"/>
                                     <action selector="mainQuest:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="AYv-ET-m8w"/>
+                                    <action selector="mainQuest:" destination="2MD-MU-XhL" eventType="touchUpInside" id="EC6-ys-1Cl"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UD1-ov-cuX">
@@ -410,8 +412,9 @@
                                 <rect key="frame" x="73" y="638" width="187" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="図書館を利用する"/>
+                                <state key="normal" title="被験者実験に参加する"/>
                                 <connections>
+                                    <action selector="subQuest_1:" destination="2MD-MU-XhL" eventType="touchUpInside" id="XfD-uI-OGR"/>
                                     <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="a1j-Nc-dXM"/>
                                     <action selector="subQuest_1:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="wWY-pu-ZNK"/>
                                 </connections>

@@ -124,7 +124,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 3, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
+                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
             }
         )
 
@@ -134,9 +134,6 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     //Returnキー押下時の呼び出しメソッド
     func textFieldShouldReturn(textField: UITextField) -> Bool {
 
-        if (num == 1) {
-            return true
-        }
         
         if (correct_label[num-1].contains(textField.text!)) {
             return true
