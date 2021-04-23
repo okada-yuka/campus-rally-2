@@ -125,6 +125,11 @@ class MapViewController: UIViewController {
         addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館", subtitle: "JM")
         addAnnotation(latitude: 34.800265709431734, longitude: 135.76943038280467, title: "日糧館", subtitle: "NR")
         addAnnotation(latitude: 34.8010082683426, longitude: 135.7685829428371, title: "理化学館", subtitle: "RG")
+        addAnnotation(latitude: 34.800131289909935, longitude: 135.76811711341193, title: "紫苑館", subtitle: "SHION")
+        addAnnotation(latitude: 34.801260436580336, longitude: 135.77002855758985, title: "恵道館", subtitle: "KD")
+        addAnnotation(latitude: 34.799969401915455, longitude: 135.77009661423085, title: "知真館3号館", subtitle: "TC-3")
+        addAnnotation(latitude: 34.80064776745684, longitude: 135.77163083772925, title: "知真館2号館", subtitle: "TC-2")
+        addAnnotation(latitude: 34.80107945171308, longitude: 135.77152354937274, title: "知真館1号館", subtitle: "TC-1")
 
         // SignOutのアラートを表示する
         //アラートコントローラーを作成する。
@@ -244,6 +249,8 @@ extension MapViewController: MKMapViewDelegate{
                 button.addTarget(self, action: #selector(sendLocation_rg), for: .touchUpInside)
                 //右側にボタンを追加
                 pinView.rightCalloutAccessoryView = button
+            case "知真館1号館", "知真館2号館", "知真館3号館", "恵道館", "紫苑館":
+                break
             default:
                 print("現在地")
                 pinView.image = UIImage(named: "current_icon")!

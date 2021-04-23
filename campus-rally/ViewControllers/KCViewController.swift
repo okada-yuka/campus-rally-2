@@ -32,7 +32,7 @@ class KCViewController: UIViewController {
     var alertTextField: UITextField!
     
     var num = 0
-    var correct_label = [[], ["SIL"]]
+    var correct_label = [[], ["SIL", "sil"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
