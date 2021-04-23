@@ -39,7 +39,7 @@ class NRViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // 現在のクリア状況を反映する
-        for (index, clear) in appDelegate.clear[2].enumerated(){
+        for (index, clear) in appDelegate.clear[1].enumerated(){
             if (clear){
                 switch index {
                 case 0:
