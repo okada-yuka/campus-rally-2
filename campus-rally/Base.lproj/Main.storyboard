@@ -89,32 +89,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-xx-bAB">
-                                <rect key="frame" x="7" y="50" width="376" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キャンパスを回ってクエストをクリアしよう！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Zd-dng">
-                                <rect key="frame" x="27" y="124" width="337" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-aB-wct">
-                                <rect key="frame" x="206" y="89" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-HF-QsX">
                                 <rect key="frame" x="51" y="63" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="username">
-                                    <color key="titleColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="pushUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbK-wh-nY6"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-aB-wct">
+                                <rect key="frame" x="181" y="57" width="187" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,6 +135,7 @@
                                 <connections>
                                     <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="MqY-Hb-1gr"/>
                                     <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="lLv-re-eSy"/>
+                                    <action selector="subQuest_1:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="mIP-jN-unm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxu-LG-VTM">
@@ -156,6 +146,7 @@
                                 <connections>
                                     <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="sG4-9b-DLD"/>
                                     <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="vBg-dR-Yp7"/>
+                                    <action selector="subQuest_2:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="hXZ-IF-02g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YF-Ff-D5q">
@@ -177,6 +168,18 @@
                                 <rect key="frame" x="246" y="203" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="Duz-gG-sjO">
+                                <rect key="frame" x="42" y="503" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="oS1-Wg-JPm">
+                                <rect key="frame" x="42" y="569" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-4V-XtQ">
+                                <rect key="frame" x="42" y="627" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rWy-F1-Qpk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,6 +187,9 @@
                     <connections>
                         <outlet property="dst_image2" destination="Fi4-u5-IPg" id="bu8-dM-0T5"/>
                         <outlet property="gray_image" destination="Zab-OJ-HND" id="byn-mG-qIX"/>
+                        <outlet property="image_mainQuest" destination="Duz-gG-sjO" id="BaJ-Qa-4cJ"/>
+                        <outlet property="image_subQuest_1" destination="oS1-Wg-JPm" id="gd5-rR-fhA"/>
+                        <outlet property="image_subQuest_2" destination="B8A-4V-XtQ" id="m40-0c-tL2"/>
                         <outlet property="mainQuest" destination="8YF-Ff-D5q" id="P40-Oc-gae"/>
                         <outlet property="subQuest_1" destination="NpB-WG-oTM" id="eT3-eW-v97"/>
                         <outlet property="subQuest_2" destination="Sxu-LG-VTM" id="Z8M-zh-7QC"/>
@@ -542,7 +548,6 @@
         <image name="KC" width="190" height="190"/>
         <image name="checkbox_false" width="1299" height="1299"/>
         <image name="homeIndicator" width="134" height="5"/>
-        <image name="white" width="356" height="103"/>
         <image name="図書館" width="190" height="190"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
