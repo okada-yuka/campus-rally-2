@@ -351,40 +351,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="ZDT-u3-KnX">
-                                <rect key="frame" x="64" y="555" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-Ry-Wqq">
-                                <rect key="frame" x="64" y="598" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE7-Ja-aRt">
-                                <rect key="frame" x="123" y="591" width="170" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="被験者実験に参加する"/>
-                                <connections>
-                                    <action selector="subQuest_1:" destination="2MD-MU-XhL" eventType="touchUpInside" id="kPr-XU-VPc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-7j-iLj">
-                                <rect key="frame" x="127" y="553" width="119" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="看板を撮影する"/>
-                                <connections>
-                                    <action selector="startCamera:" destination="2MD-MU-XhL" eventType="touchUpInside" id="SqI-3D-BvU"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="NMb-zM-5Fq">
-                                <rect key="frame" x="64" y="634" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-fr-J5a">
-                                <rect key="frame" x="224" y="682" width="122" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="香知館 KOCHIKAN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FX-r8-WUB">
                                 <rect key="frame" x="147" y="448" width="214" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,15 +358,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-u9-EEV">
-                                <rect key="frame" x="122" y="637" width="221" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="社会情報学研究室を見学する"/>
-                                <connections>
-                                    <action selector="subQuest_2:" destination="2MD-MU-XhL" eventType="touchUpInside" id="l9l-Mb-BZk"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-Jy-Gzz">
                                 <rect key="frame" x="124" y="433" width="142" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -409,17 +366,69 @@
                                 <rect key="frame" x="16" y="433" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcA-We-Tku">
+                                <rect key="frame" x="73" y="696" width="238" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="ラーニングコモンズを利用する"/>
+                                <connections>
+                                    <action selector="subQuest_2:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="1K3-IO-NiP"/>
+                                    <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="uCw-7P-9wp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbU-lk-bjo">
+                                <rect key="frame" x="73" y="572" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="mainQuest:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="5I5-sf-1AL"/>
+                                    <action selector="mainQuest:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="AYv-ET-m8w"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UD1-ov-cuX">
+                                <rect key="frame" x="233" y="113" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-Uy-Xmj">
+                                <rect key="frame" x="233" y="272" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="1Uy-hv-ka1">
+                                <rect key="frame" x="29" y="572" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-H4-ZW8">
+                                <rect key="frame" x="29" y="638" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="xm3-h3-EXy">
+                                <rect key="frame" x="29" y="696" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtw-Im-szs">
+                                <rect key="frame" x="73" y="638" width="187" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="図書館を利用する"/>
+                                <connections>
+                                    <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="a1j-Nc-dXM"/>
+                                    <action selector="subQuest_1:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="wWY-pu-ZNK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g9j-BA-Rks"/>
+                        <color key="backgroundColor" red="0.95066624369999997" green="0.95066624369999997" blue="0.95066624369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="image1" destination="ZDT-u3-KnX" id="uVR-Ma-9KM"/>
-                        <outlet property="image2" destination="Peh-Ry-Wqq" id="goI-Kl-7Ok"/>
-                        <outlet property="image3" destination="NMb-zM-5Fq" id="kKf-fb-bMi"/>
-                        <outlet property="imageView" destination="hPY-fr-J5a" id="saS-sU-NtS"/>
-                        <outlet property="mainQuest" destination="Zlu-7j-iLj" id="frb-5i-uy5"/>
-                        <outlet property="subQuest_1" destination="wE7-Ja-aRt" id="eDm-wR-ouS"/>
-                        <outlet property="subQuest_2" destination="GeR-u9-EEV" id="tko-5g-2Ja"/>
+                        <outlet property="dst_image2" destination="h8h-Uy-Xmj" id="Qzo-GT-Oeu"/>
+                        <outlet property="gray_image" destination="UD1-ov-cuX" id="Kg5-dY-9mj"/>
+                        <outlet property="image_mainQuest" destination="1Uy-hv-ka1" id="EyJ-gh-dMk"/>
+                        <outlet property="image_subQuest_1" destination="Mtn-H4-ZW8" id="mze-EV-3L2"/>
+                        <outlet property="image_subQuest_2" destination="xm3-h3-EXy" id="Qje-hx-fmo"/>
+                        <outlet property="mainQuest" destination="bbU-lk-bjo" id="UfF-tC-bQN"/>
+                        <outlet property="subQuest_1" destination="Qtw-Im-szs" id="gtZ-9e-ZOu"/>
+                        <outlet property="subQuest_2" destination="UcA-We-Tku" id="drS-cT-X3v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ode-cP-PcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -434,49 +443,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4w-0e-R7I">
-                                <rect key="frame" x="231" y="682" width="122" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-r2-9gM">
-                                <rect key="frame" x="71" y="553" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-mS-Mwu">
-                                <rect key="frame" x="71" y="596" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="3rN-ee-apx">
-                                <rect key="frame" x="71" y="632" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZJ-b1-Ef0">
-                                <rect key="frame" x="127" y="635" width="238" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="ラーニングコモンズを利用する"/>
-                                <connections>
-                                    <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="USB-Lw-zek"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFn-PG-Mz9">
-                                <rect key="frame" x="136" y="589" width="85" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="本を借りる"/>
-                                <connections>
-                                    <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="Tnl-lH-gjf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUr-Qt-cKF">
-                                <rect key="frame" x="134" y="551" width="119" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <state key="normal" title="看板を撮影する"/>
-                                <connections>
-                                    <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="8Md-Ym-jon"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-Nn-9X4">
                                 <rect key="frame" x="124" y="434" width="142" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -492,17 +458,69 @@
                                 <rect key="frame" x="35" y="434" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jec-P2-bRG">
+                                <rect key="frame" x="67" y="696" width="238" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="ラーニングコモンズを利用する"/>
+                                <connections>
+                                    <action selector="subQuest_2:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="Yr7-9y-oHL"/>
+                                    <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="r4k-yF-2wG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-wU-SlY">
+                                <rect key="frame" x="67" y="572" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="看板を撮影する"/>
+                                <connections>
+                                    <action selector="mainQuest:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="DDg-R5-Mbk"/>
+                                    <action selector="mainQuest:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="Zd6-9g-2fd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6G-nD-RlP">
+                                <rect key="frame" x="227" y="113" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgV-hV-lGs">
+                                <rect key="frame" x="227" y="272" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="I6y-RP-HA6">
+                                <rect key="frame" x="23" y="572" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="hbr-wu-f5q">
+                                <rect key="frame" x="23" y="638" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_false" translatesAutoresizingMaskIntoConstraints="NO" id="IQb-6G-1Ry">
+                                <rect key="frame" x="23" y="696" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sr-EK-WWx">
+                                <rect key="frame" x="67" y="638" width="187" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <state key="normal" title="図書館を利用する"/>
+                                <connections>
+                                    <action selector="subQuest_1:" destination="Hl7-KR-WWy" eventType="touchUpInside" id="1Fb-py-0JQ"/>
+                                    <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="zaS-Ap-xf9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pbs-r3-Yv7"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="image1" destination="BvP-r2-9gM" id="Uf9-AD-v2q"/>
-                        <outlet property="image2" destination="JKP-mS-Mwu" id="Wfp-J6-nCn"/>
-                        <outlet property="image3" destination="3rN-ee-apx" id="ZLY-j3-E7i"/>
-                        <outlet property="imageView" destination="K4w-0e-R7I" id="NHb-Fl-kE8"/>
-                        <outlet property="mainQuest" destination="lUr-Qt-cKF" id="ssK-Ad-msn"/>
-                        <outlet property="subQuest_1" destination="ZFn-PG-Mz9" id="Pit-Qx-140"/>
-                        <outlet property="subQuest_2" destination="lZJ-b1-Ef0" id="lAl-cR-OX7"/>
+                        <outlet property="dst_image2" destination="mgV-hV-lGs" id="pYE-Ro-A9C"/>
+                        <outlet property="gray_image" destination="E6G-nD-RlP" id="fXa-Ky-bVr"/>
+                        <outlet property="image_mainQuest" destination="I6y-RP-HA6" id="uoS-tU-X3N"/>
+                        <outlet property="image_subQuest_1" destination="hbr-wu-f5q" id="vaO-Yf-JpS"/>
+                        <outlet property="image_subQuest_2" destination="IQb-6G-1Ry" id="J5E-ET-KdC"/>
+                        <outlet property="mainQuest" destination="vc7-wU-SlY" id="6Iy-7O-4Ii"/>
+                        <outlet property="subQuest_1" destination="5Sr-EK-WWx" id="nWb-KE-n8T"/>
+                        <outlet property="subQuest_2" destination="jec-P2-bRG" id="Bbp-A2-PWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6Y-SP-EFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -581,6 +599,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j5U-j5-zCe"/>
+                        <color key="backgroundColor" red="0.95066624369999997" green="0.95066624369999997" blue="0.95066624369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="dst_image2" destination="IE5-Ay-8Fr" id="yKE-E6-nt0"/>
