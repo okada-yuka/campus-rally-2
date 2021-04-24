@@ -84,8 +84,6 @@ class RGViewController: UIViewController, UITextFieldDelegate {
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
                 self.alertTextField = textField
-                // textField.placeholder = "Mike"
-                // textField.isSecureTextEntry = true
         })
         alert.addAction(
             UIAlertAction(
@@ -113,8 +111,6 @@ class RGViewController: UIViewController, UITextFieldDelegate {
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
                 self.alertTextField = textField
-                // textField.placeholder = "Mike"
-                // textField.isSecureTextEntry = true
         })
         alert.addAction(
             UIAlertAction(
@@ -167,7 +163,6 @@ extension RGViewController: UIImagePickerControllerDelegate, UINavigationControl
         // 文字認識
         let out_text = functions.charactor_recognition_view(imageView: self.gray_image, imageView2: dst_image2, input_image: image_UIImage)
         print(out_text)
-                //image_UIImage))
         
         // 正誤判定
         result = functions.judgement(input_text: out_text, correct_labels: "理化学館", "RIKAGAKUKAN", "rikagakukan")
