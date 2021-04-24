@@ -126,14 +126,16 @@ class functions: NSObject {
     }
     
     // 結果によってprogressBar、ボタンの状態、クエストの画像、クリア状況を更新する関数
-    class func reflect_result(facility_num: Int, quest_num: Int, button: UIButton, imageView: UIImageView, result: Bool){
+    class func reflect_result(facility_num: Int, quest_num: Int, button: UIButton, label: UILabel, result: Bool){
         var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         print(result)
         if (result == true){
             print("0.05をたす")
             appDelegate.progress_sum += 0.05
+            button.setImage(UIImage(named: "ok"), for: .normal)
             button.isEnabled = false
-            imageView.image = UIImage(named: "checkbox_true")
+            label.textColor = #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8235294118, alpha: 1)
+            //imageView.image = UIImage(named: "checkbox_true")
             appDelegate.clear[facility_num][quest_num] = true
             print(appDelegate.clear[facility_num][quest_num])
             // 施設のクエストを全てクリアしているか
@@ -141,6 +143,9 @@ class functions: NSObject {
                 print("全クリ")
             }
                 
+        }else{
+            button.setImage(UIImage(named: "retry"), for: .normal)
+            label.textColor = #colorLiteral(red: 0.862745098, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
         }
     }
     
@@ -198,7 +203,7 @@ class DrawView: UIView {
     override func draw(_ rect: CGRect) {
 
         // 角が丸い四角形（短形）
-        let roundrRectangle = UIBezierPath(roundedRect: CGRect(x: 30, y: 420, width: 330, height: 300), cornerRadius: 10.0)
+        let roundrRectangle = UIBezierPath(roundedRect: CGRect(x: 0, y: 445, width: 390, height: 558), cornerRadius: 44.0)
         // 内側の色
         #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
         // 内側を塗りつぶす
