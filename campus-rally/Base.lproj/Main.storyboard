@@ -11,6 +11,9 @@
         <array key="MPLUSRounded1c-Bold.ttf">
             <string>RoundedMplus1c-Bold</string>
         </array>
+        <array key="MPLUSRounded1c-ExtraBold.ttf">
+            <string>RoundedMplus1c-ExtraBold</string>
+        </array>
         <array key="MPLUSRounded1c-Regular.ttf">
             <string>RoundedMplus1c-Regular</string>
         </array>
@@ -89,18 +92,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-HF-QsX">
-                                <rect key="frame" x="51" y="63" width="110" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-HF-QsX">
+                                <rect key="frame" x="24" y="63" width="258" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="username">
+                                <state key="normal" image="UserBar">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="pushUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbK-wh-nY6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="usernameさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8v-Dr-WVG">
+                                <rect key="frame" x="96" y="76" width="130" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-ExtraBold" family="Rounded Mplus 1c" pointSize="19"/>
+                                <color key="textColor" red="0.2274509804" green="0.26274509800000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-aB-wct">
-                                <rect key="frame" x="181" y="57" width="187" height="4"/>
+                                <rect key="frame" x="134" y="113" width="138" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
@@ -113,6 +123,7 @@
                         <outlet property="mapView" destination="u3O-kc-ij5" id="9IN-HY-nNW"/>
                         <outlet property="progressBar" destination="SSO-aB-wct" id="3mb-xZ-N5c"/>
                         <outlet property="usernameButton" destination="qfE-HF-QsX" id="PfM-44-EmB"/>
+                        <outlet property="usernameLabel" destination="f8v-Dr-WVG" id="Cy8-Up-P5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -694,6 +705,7 @@
         <image name="Library" width="366" height="338"/>
         <image name="NR" width="366" height="338"/>
         <image name="RG" width="366" height="338"/>
+        <image name="UserBar" width="258" height="74"/>
         <image name="camera" width="500" height="103"/>
         <image name="homeIndicator" width="46" height="5"/>
         <image name="quiz" width="500" height="103"/>

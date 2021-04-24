@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var usernameButton: UIButton!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     var signOutAlert: UIAlertController!
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -60,7 +61,7 @@ class MapViewController: UIViewController {
                         print(self.appDelegate.username)
                         print("Logged In")
 
-                        self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
+                        self.usernameLabel.text = self.appDelegate.username + "さん"
                     }
                     
                 case .signedOut:
@@ -71,7 +72,7 @@ class MapViewController: UIViewController {
                                 print(AWSMobileClient.default().username)
                                 print("Sign In")
 
-                                self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
+                                self.usernameLabel.text = self.appDelegate.username + "さん"
                             }
 
                         }
@@ -93,7 +94,7 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         
         // プログレスバーを太くする
-        progressBar.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        progressBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
         progressBar.progress = 0
         
 //        self.goBackCenter()
@@ -149,7 +150,7 @@ class MapViewController: UIViewController {
                 if let signInState = signInState {
                     print("SignInしました")
                     self.appDelegate.username = AWSMobileClient.default().username
-                    self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
+                    self.usernameLabel.text = self.appDelegate.username + "さん"
                 } else if let error = error {
                     print("error logging in: \(error.localizedDescription)")
                 }
@@ -215,7 +216,7 @@ extension MapViewController: MKMapViewDelegate{
         button.frame = CGRect(x:0,y:0,width:80,height:40)
 
         // 吹き出しのボタンの画像を設定
-        button.setImage(UIImage(named: "pin_purple")!, for: .normal)
+        button.setImage(UIImage(named: "QuestButton")!, for: .normal)
         
         // ピンの画像を設定
         pinView.image = UIImage(named: "pin_purple")!
