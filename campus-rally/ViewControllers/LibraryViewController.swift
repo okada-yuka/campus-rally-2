@@ -21,10 +21,9 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gray_image: UIImageView!
     @IBOutlet weak var dst_image2: UIImageView!
     
-    
-    @IBOutlet weak var image_mainQuest: UIImageView!
-    @IBOutlet weak var image_subQuest_1: UIImageView!
-    @IBOutlet weak var image_subQuest_2: UIImageView!
+    @IBOutlet weak var label_mainQuest: UILabel!
+    @IBOutlet weak var label_subQuest_1: UILabel!
+    @IBOutlet weak var label_subQuest_2: UILabel!
     
     @IBOutlet weak var mainQuest: UIButton!
     @IBOutlet weak var subQuest_1: UIButton!
@@ -45,10 +44,16 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
                 switch index {
                 case 0:
                     mainQuest.isEnabled = false
+                    mainQuest.setImage(UIImage(named: "ok"), for: .normal)
+                    label_mainQuest.textColor = #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8235294118, alpha: 1)
                 case 1:
                     subQuest_1.isEnabled = false
+                    subQuest_1.setImage(UIImage(named: "ok"), for: .normal)
+                    label_subQuest_1.textColor = #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8235294118, alpha: 1)
                 case 2:
                     subQuest_2.isEnabled = false
+                    subQuest_2.setImage(UIImage(named: "ok"), for: .normal)
+                    label_subQuest_2.textColor = #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8235294118, alpha: 1)
                 default:
                     break
                 }
@@ -97,7 +102,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_1, imageView: self.image_subQuest_1, result: true)
+                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_1, label: self.label_subQuest_1, result: true)
             }
         )
 
@@ -124,7 +129,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
             UIAlertAction(
                 title: "OK",
                 style: UIAlertAction.Style.default) { _ in
-                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_2, imageView: self.image_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
+                functions.reflect_result(facility_num: 0, quest_num: self.num, button: self.subQuest_2, label: self.label_subQuest_2, result: self.textFieldShouldReturn(textField: self.alertTextField))
             }
         )
 
@@ -165,7 +170,7 @@ extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationCo
         image_UIImage = UIImage(data: image_jpeg)
 
         // 文字認識
-        let out_text = functions.charactor_recognition_view(imageView: self.gray_image, imageView2: dst_image2, input_image: image_UIImage)
+        let out_text = functions.charactor_recognition(input_image: image_UIImage)
         print(out_text)
         
         // 正誤判定
@@ -176,6 +181,6 @@ extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationCo
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)
         
-        functions.reflect_result(facility_num: 0, quest_num: 0, button: mainQuest, imageView: image_mainQuest, result: result)
+        functions.reflect_result(facility_num: 0, quest_num: 0, button: mainQuest, label: label_mainQuest, result: result)
     }
 }
