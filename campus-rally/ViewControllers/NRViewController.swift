@@ -118,8 +118,6 @@ class NRViewController: UIViewController, UITextFieldDelegate {
         alert.addTextField(
             configurationHandler: {(textField: UITextField!) in
                 self.alertTextField = textField
-                // textField.placeholder = "Mike"
-                // textField.isSecureTextEntry = true
         })
         alert.addAction(
             UIAlertAction(

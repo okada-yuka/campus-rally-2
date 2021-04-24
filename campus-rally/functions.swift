@@ -36,12 +36,9 @@ class functions: NSObject {
         
         let start = Date()
 
-        //let fileName = "kochikan.JPG"
-        //guard let image_out = dst_Image2 else { return }
 
         swiftyTesseract.performOCR(on: dst_Image2) { recognizedString in
             guard let text_out = recognizedString else { return }
-//            print("\(text_out)")
             
             text = text_out
         }
