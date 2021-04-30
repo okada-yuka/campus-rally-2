@@ -17,9 +17,9 @@
 
 # Installation
  
-* OpenCVのインストール方法
+* OpenCVのインストール方法  
 https://qiita.com/treastrain/items/0090d1103033b20de054
-* その他
+* その他  
 Podfileを使用
 
 # Presentation
